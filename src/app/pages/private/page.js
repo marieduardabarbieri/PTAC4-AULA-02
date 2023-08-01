@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 export default function PagePrivate() {
     const { push, refresh } = useRouter();
     const handlerRemoveToken = () => {
-      Cookies.set('token', 'ceceeecwfewcewe');
+      Cookies.delete('token', 'ceceeecwfewcewe');
       push('/');
       refresh();
     }
